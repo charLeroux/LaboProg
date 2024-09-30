@@ -6,7 +6,9 @@ var app = express();
 var http = require('http');
 app.set('view engine', 'ejs');
 var mqtt = require('mqtt');
+
 var client  = mqtt.connect('mqtt://127.0.0.1:1883');
+client.subscribe('MODULE/#');
 var id1 = 0;
 var id2 = 0;
 var id3 = 0;
@@ -35,6 +37,7 @@ client.on('connect', function () {
     console.log("MQTT connecté !");
 });
 
+client.publish('MODULE', 'le serveur js vous dit bonjour');
 
 app.get('/module/:varModule',function(req,res)
 {
