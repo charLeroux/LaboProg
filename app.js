@@ -5,6 +5,8 @@ var express = require('express')
 var app = express();
 var http = require('http');
 app.set('view engine', 'ejs');
+var mqtt = require('mqtt');
+var client  = mqtt.connect('mqtt://127.0.0.1:1883');
 var id1 = 0;
 var id2 = 0;
 var id3 = 0;
@@ -28,6 +30,11 @@ app.get('/',function(req,res)
     res.send(resultat + "<a href= '/'>retour a l accueil</a>");
 
 });
+
+client.on('connect', function () {
+    console.log("MQTT connecté !");
+});
+
 
 app.get('/module/:varModule',function(req,res)
 {
