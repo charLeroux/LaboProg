@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module Status</title>
+  <style>
+    .button {
+      padding: 10px 20px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 5px;
+      display: inline-block;
+    }
+    .green { background-color: green; }
+    .red { background-color: red; }
+    .gray { background-color: gray; }
+  </style>
+</head>
+<body>
+  <h1>Module Status Check</h1>
+  <div>
+    <% if(controle1) {%>
+        <button class="button" style="color: green;"> Module 1</button>
+    <%} else {%>
+        <button class="button" style="color: red;"> Module 1</button>
+    <%  }%>
+    <% if(controle2) {%>
+        <button class="button" style="color: green;"> Module 2</button>
+    <%} else {%>
+        <button class="button" style="color: red;"> Module 2</button>
+    <%  }%>
+    <% if(controle3) {%>
+        <button class="button" style="color: green;"> Module 3</button>
+    <%} else {%>
+        <button class="button" style="color: red;"> Module 3</button>
+    <%  }%>
+    <% if(controle4) {%>
+        <button class="button" style="color: green;"> Module 4</button>
+    <%} else {%>
+        <button class="button" style="color: red;"> Module 4</button>
+    <%  }%>
+    <% if(controle5) {%>
+        <button class="button" style="color: green;"> Module 5</button>
+    <%} else {%>
+        <button class="button" style="color: red;"> Module 5</button>
+    <%  }%>
+    <% if(controle6) {%>
+        <button class="button" style="color: green;"> Module 6</button>
+    <%} else {%>
+        <button class="button" style="color: red;"> Module 6</button>
+    <%  }%>
+  </div>
+</body>
+</html>
+
+
+
+
